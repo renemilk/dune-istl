@@ -1,4 +1,4 @@
 Module: dune-istl
 Version: 1.0.1-rk-diss
-Email: dune@dune-project.org
+Maintainer: dune@dune-project.org
 Depends: dune-common
