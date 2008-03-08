@@ -47,6 +47,7 @@ for OPT in "$@"; do
 	    if test -d "$OPT/share/dune-common/am"; then
 	      am_dir="$OPT/share/dune-common/am"
 	    fi
+		PATH=$PATH:$OPT/bin
             ;;
     esac
 done
@@ -81,6 +82,8 @@ libtoolize --force
 
 # prepare everything
 echo "--> aclocal..."
+rm -f aclocal.m4
+rm -rf autom4te.cache
 aclocal$AMVERSION $ACLOCAL_FLAGS
 
 # applications should provide a config.h for now
