@@ -157,7 +157,7 @@ namespace Dune {
 
        \copydoc Preconditioner::pre(X&,Y&)
      */
-    virtual void pre (X& x, Y& b) {}
+    virtual void pre (X& /*x*/, Y& /*b*/) {}
 
     /*!
        \brief Apply the preconditioner
@@ -177,7 +177,7 @@ namespace Dune {
 
        \copydoc Preconditioner::post(X&)
      */
-    virtual void post (X& x) {}
+    virtual void post (X& /*x*/) {}
 
   private:
     //! \brief The matrix we operate on.
@@ -237,7 +237,7 @@ namespace Dune {
 
        \copydoc Preconditioner::pre(X&,Y&)
      */
-    virtual void pre (X& x, Y& b) {}
+    virtual void pre (X& /*x*/, Y& /*b*/) {}
 
     /*!
        \brief Apply the preconditioner.
@@ -275,7 +275,7 @@ namespace Dune {
 
        \copydoc Preconditioner::post(X&)
      */
-    virtual void post (X& x) {}
+    virtual void post (X& /*x*/) {}
 
   private:
     //! \brief the matrix we operate on.
@@ -333,7 +333,7 @@ namespace Dune {
 
        \copydoc Preconditioner::pre(X&,Y&)
      */
-    virtual void pre (X& x, Y& b) {}
+    virtual void pre (X& /*x*/, Y& /*b*/) {}
 
     /*!
        \brief Apply the preconditioner.
@@ -352,7 +352,7 @@ namespace Dune {
 
        \copydoc Preconditioner::post(X&)
      */
-    virtual void post (X& x) {}
+    virtual void post (X& /*x*/) {}
 
   private:
     //! \brief The matrix we operate on.
@@ -410,7 +410,7 @@ namespace Dune {
 
        \copydoc Preconditioner::pre(X&,Y&)
      */
-    virtual void pre (X& x, Y& b) {}
+    virtual void pre (X& /*x*/, Y& /*b*/) {}
 
     /*!
        \brief Apply the preconditioner.
@@ -429,7 +429,7 @@ namespace Dune {
 
        \copydoc Preconditioner::post(X&)
      */
-    virtual void post (X& x) {}
+    virtual void post (X& /*x*/) {}
 
   private:
     //! \brief The matrix we operate on.
@@ -489,7 +489,7 @@ namespace Dune {
 
        \copydoc Preconditioner::pre(X&,Y&)
      */
-    virtual void pre (X& x, Y& b) {}
+    virtual void pre (X& /*x*/, Y& /*b*/) {}
 
     /*!
        \brief Apply the preconditoner.
@@ -507,7 +507,7 @@ namespace Dune {
 
        \copydoc Preconditioner::post(X&)
      */
-    virtual void post (X& x) {}
+    virtual void post (X& /*x*/) {}
 
   private:
     //! \brief The relaxation factor to use.
@@ -568,7 +568,7 @@ namespace Dune {
 
        \copydoc Preconditioner::pre(X&,Y&)
      */
-    virtual void pre (X& x, Y& b) {}
+    virtual void pre (X& /*x*/, Y& /*b*/) {}
 
     /*!
        \brief Apply the precondioner.
@@ -586,7 +586,7 @@ namespace Dune {
 
        \copydoc Preconditioner::post(X&)
      */
-    virtual void post (X& x) {}
+    virtual void post (X& /*x*/) {}
 
   private:
     //! \brief ILU(n) decomposition of the matrix we operate on.
@@ -638,7 +638,7 @@ namespace Dune {
 
        \copydoc Preconditioner::pre(X&,Y&)
      */
-    virtual void pre (X& x, Y& b) {}
+    virtual void pre (X& /*x*/, Y& /*b*/) {}
 
     /*!
        \brief Apply the precondioner.
@@ -656,7 +656,7 @@ namespace Dune {
 
        \copydoc Preconditioner::post(X&)
      */
-    virtual void post (X& x) {}
+    virtual void post (X& /*x*/) {}
 
   private:
     //! \brief The relaxation factor to use.
