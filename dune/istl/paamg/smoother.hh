@@ -99,7 +99,7 @@ namespace Dune
       {
         matrix_=&matrix;
       }
-      virtual void setMatrix(const Matrix& matrix, const AggregatesMap& amap)
+      virtual void setMatrix(const Matrix& matrix, const AggregatesMap& /*amap*/)
       {
         setMatrix(matrix);
       }
@@ -116,7 +116,7 @@ namespace Dune
       }
 
       template<class T1>
-      void setComm(T1& comm)
+      void setComm(T1& /*comm*/)
       {}
 
       const SequentialInformation& getComm()
@@ -641,9 +641,9 @@ namespace Dune
       struct NoneAdder
       {
         template<class T>
-        void operator()(const T& edge)
+        void operator()(const T& /*edge*/)
         {}
-        int setAggregate(const AggregateDescriptor& aggregate_)
+        int setAggregate(const AggregateDescriptor& /*aggregate_*/)
         {
           return -1;
         }
@@ -741,7 +741,7 @@ namespace Dune
       }
 
       template<class Visitor>
-      void createSubdomains(const M& matrix, const MatrixGraph<const M>& graph,
+      void createSubdomains(const M& /*matrix*/, const MatrixGraph<const M>& graph,
                             const AggregatesMap& amap, Visitor& overlapVisitor,
                             IteratorPropertyMap<std::vector<bool>::iterator,IdentityMap>& visitedMap )
       {

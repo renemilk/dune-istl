@@ -234,7 +234,7 @@ namespace Dune {
 
        \copydoc Preconditioner::pre(X&,Y&)
      */
-    virtual void pre (X& x, Y& b)
+    virtual void pre (X& x, Y& /*b*/)
     {
       communication.copyOwnerToAll(x,x);     // make dirichlet values consistent
     }
@@ -258,7 +258,7 @@ namespace Dune {
 
        \copydoc Preconditioner::post(X&)
      */
-    virtual void post (X& x) {}
+    virtual void post (X& /*x*/) {}
 
   private:
     //! \brief The matrix we operate on.

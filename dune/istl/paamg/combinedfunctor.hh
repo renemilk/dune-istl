@@ -23,7 +23,7 @@ namespace Dune
     struct ApplyHelper<0>
     {
       template<class TT, class T>
-      static void apply(TT tuple, const T& t)
+      static void apply(TT /*tuple*/, const T& /*t*/)
       {}
     };
 

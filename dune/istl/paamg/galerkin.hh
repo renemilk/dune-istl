@@ -495,7 +495,7 @@ namespace Dune
     template<class V, class R>
     void ConnectivityConstructor<G,SequentialInformation>::examine(G& graph,
                                                                    V& visitedMap,
-                                                                   const SequentialInformation& pinfo,
+                                                                   const SequentialInformation& /*pinfo*/,
                                                                    const AggregatesMap<Vertex>& aggregates,
                                                                    R& row)
     {
@@ -561,7 +561,7 @@ namespace Dune
 
     template<class T>
     template<class M, class G, class V, class Set>
-    M* GalerkinProduct<T>::build(const M& fine, G& fineGraph, V& visitedMap,
+    M* GalerkinProduct<T>::build(const M& /*fine*/, G& fineGraph, V& visitedMap,
                                  const ParallelInformation& pinfo,
                                  AggregatesMap<typename G::VertexDescriptor>& aggregates,
                                  const typename M::size_type& size,
@@ -610,11 +610,11 @@ namespace Dune
     }
 
     template<class M, class G, class V, class Set>
-    M* GalerkinProduct<SequentialInformation>::build(const M& fine, G& fineGraph, V& visitedMap,
+    M* GalerkinProduct<SequentialInformation>::build(const M& /*fine*/, G& fineGraph, V& visitedMap,
                                                      const SequentialInformation& pinfo,
                                                      const AggregatesMap<typename G::VertexDescriptor>& aggregates,
                                                      const typename M::size_type& size,
-                                                     const Set& overlap)
+                                                     const Set& /*overlap*/)
     {
       M* coarseMatrix = new M(size, size, M::row_wise);
 
@@ -640,7 +640,7 @@ namespace Dune
 
     template<class M, class V, class P, class O>
     void BaseGalerkinProduct::calculate(const M& fine, const AggregatesMap<V>& aggregates, M& coarse,
-                                        const P& pinfo, const O& copy)
+                                        const P& pinfo, const O& /*copy*/)
     {
       coarse = static_cast<typename M::field_type>(0);
 
@@ -711,9 +711,9 @@ namespace Dune
     }
 
     template<class M, class O>
-    void DirichletBoundarySetter<SequentialInformation>::set(M& coarse,
-                                                             const SequentialInformation& pinfo,
-                                                             const O& overlap)
+    void DirichletBoundarySetter<SequentialInformation>::set(M& /*coarse*/,
+                                                             const SequentialInformation& /*pinfo*/,
+                                                             const O& /*overlap*/)
     {}
 
   } // namespace Amg

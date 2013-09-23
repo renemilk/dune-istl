@@ -94,10 +94,10 @@ namespace Dune
     template<typename T>
     inline void
     Transfer<V,V1,SequentialInformation>::prolongateVector(const AggregatesMap<Vertex>& aggregates,
-                                                           Vector& coarse, Vector& fine, Vector& fineRedist,
+                                                           Vector& coarse, Vector& fine, Vector& /*fineRedist*/,
                                                            T damp,
-                                                           const SequentialInformation& comm,
-                                                           const Redist& redist)
+                                                           const SequentialInformation& /*comm*/,
+                                                           const Redist& /*redist*/)
     {
       prolongateVector(aggregates, coarse, fine, damp);
     }
@@ -107,7 +107,7 @@ namespace Dune
     Transfer<V,V1,SequentialInformation>::prolongateVector(const AggregatesMap<Vertex>& aggregates,
                                                            Vector& coarse, Vector& fine,
                                                            T damp,
-                                                           const SequentialInformation& comm)
+                                                           const SequentialInformation& /*comm*/)
     {
       typedef typename Vector::iterator Iterator;
 
@@ -131,7 +131,7 @@ namespace Dune
     Transfer<V,V1,SequentialInformation>::restrictVector(const AggregatesMap<Vertex>& aggregates,
                                                          Vector& coarse,
                                                          const Vector& fine,
-                                                         const SequentialInformation& comm)
+                                                         const SequentialInformation& /*comm*/)
     {
       // Set coarse vector to zero
       coarse=0;

@@ -219,7 +219,7 @@ namespace Dune
 
     template<class M, class N>
     template<class G>
-    inline void SymmetricMatrixDependency<M,N>::examine(G& graph, const typename G::EdgeIterator& edge, const ColIter& col)
+    inline void SymmetricMatrixDependency<M,N>::examine(G& /*graph*/, const typename G::EdgeIterator& edge, const ColIter& /*col*/)
     {
       if(*valIter_ > alpha() * maxValue_) {
         edge.properties().setDepends();
@@ -434,7 +434,7 @@ namespace Dune
        * @param m The matrix row to compute the norm of.
        */
       template<class M>
-      typename M::field_type operator()(const M& m) const
+      typename M::field_type operator()(const M& /*m*/) const
       {
         return 1;
       }
@@ -535,7 +535,7 @@ namespace Dune
       {
       public:
         template<class EdgeIterator>
-        void operator()(const EdgeIterator& egde) const
+        void operator()(const EdgeIterator& /*egde*/) const
         {}
       };
 
@@ -684,13 +684,13 @@ namespace Dune
       }
     private:
       /** @brief Prevent copying. */
-      AggregatesMap(const AggregatesMap<V>& map)
+      AggregatesMap(const AggregatesMap<V>& /*map*/)
       {
         throw "Auch!";
       }
 
       /** @brief Prevent assingment. */
-      AggregatesMap<V>& operator=(const AggregatesMap<V>& map)
+      AggregatesMap<V>& operator=(const AggregatesMap<V>& /*map*/)
       {
         throw "Auch!";
         return this;
@@ -1349,7 +1349,7 @@ namespace Dune
     }
 
     template<class M, class N>
-    inline void SymmetricDependency<M,N>::initRow(const Row& row, int index)
+    inline void SymmetricDependency<M,N>::initRow(const Row& /*row*/, int index)
     {
       maxValue_ = std::min(- std::numeric_limits<typename Matrix::field_type>::max(), std::numeric_limits<typename Matrix::field_type>::min());
       row_ = index;
@@ -1403,7 +1403,7 @@ namespace Dune
     }
 
     template<class M, class N>
-    inline void Dependency<M,N>::initRow(const Row& row, int index)
+    inline void Dependency<M,N>::initRow(const Row& /*row*/, int index)
     {
       maxValue_ = std::min(- std::numeric_limits<typename Matrix::field_type>::max(), std::numeric_limits<typename Matrix::field_type>::min());
       row_ = index;
@@ -1447,7 +1447,7 @@ namespace Dune
     {}
 
     template<class G,class S>
-    void Aggregate<G,S>::reconstruct(const Vertex& vertex)
+    void Aggregate<G,S>::reconstruct(const Vertex& /*vertex*/)
     {
       /*
          vertices_.push_back(vertex);

@@ -66,7 +66,7 @@ namespace Dune {
   template<class K, int n>
   void recursive_printvector (std::ostream& s, const FieldVector<K,n>& v,
                               std::string rowtext, int& counter, int columns,
-                              int width, int precision)
+                              int width, int /*precision*/)
   {
     // we now can print n numbers
     for (int i=0; i<n; i++)
@@ -140,7 +140,7 @@ namespace Dune {
    * #include <dune/istl/io.hh>
    * \endcode
    */
-  inline void fill_row (std::ostream& s, int m, int width, int precision)
+  inline void fill_row (std::ostream& s, int m, int width, int /*precision*/)
   {
     for (int j=0; j<m; j++)
     {
@@ -199,9 +199,9 @@ namespace Dune {
   template<class K, int n, int m>
   void print_row (std::ostream& s, const FieldMatrix<K,n,m>& A,
                   typename FieldMatrix<K,n,m>::size_type I,
-                  typename FieldMatrix<K,n,m>::size_type J,
+                  typename FieldMatrix<K,n,m>::size_type /*J*/,
                   typename FieldMatrix<K,n,m>::size_type therow, int width,
-                  int precision)
+                  int /*precision*/)
   {
     typedef typename FieldMatrix<K,n,m>::size_type size_type;
 
@@ -225,9 +225,9 @@ namespace Dune {
   template<class K>
   void print_row (std::ostream& s, const FieldMatrix<K,1,1>& A,
                   typename FieldMatrix<K,1,1>::size_type I,
-                  typename FieldMatrix<K,1,1>::size_type J,
+                  typename FieldMatrix<K,1,1>::size_type /*J*/,
                   typename FieldMatrix<K,1,1>::size_type therow,
-                  int width, int precision)
+                  int width, int /*precision*/)
   {
     if (I==therow)
     {

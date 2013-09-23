@@ -222,9 +222,9 @@ namespace Dune
       typedef SequentialInformation ParallelInformation;
       typedef typename ParallelInformation::GlobalLookupIndexSet GlobalLookupIndexSet;
 
-      static void publish(AggregatesMap<Vertex>& aggregates,
-                          ParallelInformation& pinfo,
-                          const GlobalLookupIndexSet& globalLookup)
+      static void publish(AggregatesMap<Vertex>& /*aggregates*/,
+                          ParallelInformation& /*pinfo*/,
+                          const GlobalLookupIndexSet& /*globalLookup*/)
       {}
     };
 

@@ -123,7 +123,7 @@ namespace Dune
           }
         }
 
-        Vertex operator()(const GlobalIndex& global)
+        Vertex operator()(const GlobalIndex& /*global*/)
         {
           Vertex current = this->number_;
           this->operator++();
@@ -230,7 +230,7 @@ namespace Dune
                                            VM& visitedMap,
                                            AggregatesMap<typename Graph::VertexDescriptor>& aggregates,
                                            ParallelInformation& coarseInfo,
-                                           typename Graph::VertexDescriptor noAggregates)
+                                           typename Graph::VertexDescriptor /*noAggregates*/)
     {
       ParallelAggregateRenumberer<Graph,typename ParallelInformation::GlobalLookupIndexSet> renumberer(aggregates, fineInfo.globalLookup());
       buildCoarseIndexSet(fineInfo, fineGraph, visitedMap, aggregates,

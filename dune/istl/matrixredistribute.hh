@@ -21,36 +21,36 @@ namespace Dune
       return false;
     }
     template<class D>
-    void redistribute(const D& from, D& to) const
+    void redistribute(const D& /*from*/, D& /*to*/) const
     {}
 
     template<class D>
-    void redistributeBackward(D& from, const D& to) const
+    void redistributeBackward(D& /*from*/, const D& /*to*/) const
     {}
 
     void resetSetup()
     {}
 
-    void setNoRows(std::size_t size)
+    void setNoRows(std::size_t /*size*/)
     {}
 
-    void setNoCopyRows(std::size_t size)
+    void setNoCopyRows(std::size_t /*size*/)
     {}
 
-    void setNoBackwardsCopyRows(std::size_t size)
+    void setNoBackwardsCopyRows(std::size_t /*size*/)
     {}
 
-    std::size_t getRowSize(std::size_t index) const
+    std::size_t getRowSize(std::size_t /*index*/) const
     {
       return -1;
     }
 
-    std::size_t getCopyRowSize(std::size_t index) const
+    std::size_t getCopyRowSize(std::size_t /*index*/) const
     {
       return -1;
     }
 
-    std::size_t getBackwardsCopyRowSize(std::size_t index) const
+    std::size_t getBackwardsCopyRowSize(std::size_t /*index*/) const
     {
       return -1;
     }
@@ -548,7 +548,7 @@ namespace Dune
         }
       }
     }
-    static void scatter(Container& cont, const GlobalIndex& gi, std::size_t i, std::size_t j)
+    static void scatter(Container& cont, const GlobalIndex& gi, std::size_t i, std::size_t /*j*/)
     {
       try{
         if (gi != std::numeric_limits<GlobalIndex>::max()) {
@@ -633,7 +633,7 @@ namespace Dune
         return datastore;
       }
     }
-    static void scatter(Container& cont, const Data& data, std::size_t i, std::size_t j)
+    static void scatter(Container& cont, const Data& data, std::size_t i, std::size_t /*j*/)
     {
       try{
         if (data.first != std::numeric_limits<GlobalIndex>::max()) {

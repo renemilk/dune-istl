@@ -550,7 +550,7 @@ namespace Dune
     }
 
     template<class T, class I>
-    void my_push_back(std::vector<T>& ownerVec, const I& index, int proc)
+    void my_push_back(std::vector<T>& ownerVec, const I& index, int /*proc*/)
     {
       ownerVec.push_back(index);
     }
@@ -589,7 +589,7 @@ namespace Dune
      */
     template<class OwnerSet, class G, class IS, class T, class GI>
     void getOwnerOverlapVec(const G& graph, std::vector<int>& part, IS& indexSet,
-                            int myPe, int toPe, std::vector<T>& ownerVec, std::set<GI>& overlapSet,
+                            int /*myPe*/, int toPe, std::vector<T>& ownerVec, std::set<GI>& overlapSet,
                             RedistributeInterface& redist, std::set<int>& neighborProcs) {
 
       //typedef typename IndexSet::const_iterator Iterator;
@@ -657,7 +657,7 @@ namespace Dune
     struct EdgeFunctor
       : public BaseEdgeFunctor
     {
-      EdgeFunctor(int* adj, const ParmetisDuneIndexMap& data, std::size_t s)
+      EdgeFunctor(int* adj, const ParmetisDuneIndexMap& data, std::size_t /*s*/)
         : BaseEdgeFunctor(adj, data)
       {}
 

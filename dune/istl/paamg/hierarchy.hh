@@ -490,7 +490,7 @@ namespace Dune
         /**
          * @brief Print matrix statistics.
          */
-        static void stats(const Matrix& matrix)
+        static void stats(const Matrix& /*matrix*/)
         {}
       };
 
@@ -568,11 +568,11 @@ namespace Dune
     };
 
     template<typename M, typename C1>
-    bool repartitionAndDistributeMatrix(const M& origMatrix, M& newMatrix,
-                                        SequentialInformation& origSequentialInformationomm,
-                                        SequentialInformation*& newComm,
-                                        RedistributeInformation<SequentialInformation>& ri,
-                                        int nparts, C1& criterion)
+    bool repartitionAndDistributeMatrix(const M& /*origMatrix*/, M& /*newMatrix*/,
+                                        SequentialInformation& /*origSequentialInformationomm*/,
+                                        SequentialInformation*& /*newComm*/,
+                                        RedistributeInformation<SequentialInformation>& /*ri*/,
+                                        int /*nparts*/, C1& /*criterion*/)
     {
       DUNE_THROW(NotImplemented, "Redistribution does not make sense in sequential code!");
     }

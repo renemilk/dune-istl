@@ -289,7 +289,7 @@ namespace Dune
 
   template<typename G, typename EP, typename VM, typename EM>
   typename PropertyMapTypeSelector<Amg::VertexVisitedTag,Amg::PropertiesGraph<G,Amg::VertexProperties,EP,VM,EM> >::Type
-  get(const Amg::VertexVisitedTag& tag, Amg::PropertiesGraph<G,Amg::VertexProperties,EP,VM,EM>& graph)
+  get(const Amg::VertexVisitedTag& /*tag*/, Amg::PropertiesGraph<G,Amg::VertexProperties,EP,VM,EM>& graph)
   {
     return Amg::PropertyGraphVertexPropertyMap<Amg::PropertiesGraph<G,Amg::VertexProperties,EP,VM,EM>, Amg::VertexProperties::VISITED>(graph);
   }
